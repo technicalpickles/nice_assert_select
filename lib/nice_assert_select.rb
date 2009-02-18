@@ -29,3 +29,8 @@ module NiceAssertSelect
     hidden_field(:name => '_method', :value => method)
   end
 end
+
+ActionController::TestCase.class_eval do
+  include NiceAssertSelect
+end
+
