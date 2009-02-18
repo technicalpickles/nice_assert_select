@@ -28,7 +28,6 @@ nice_assert_select provides helpers for making the calls more rubyish and more r
 
 It is by no means comprehensive, as it was extracted from a project which only needed this selectors.
 
-COPYRIGHT
-=========
+== COPYRIGHT
 
 Copyright (c) 2009 Josh Nichols. See LICENSE for details.
