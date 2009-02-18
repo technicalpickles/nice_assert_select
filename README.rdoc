@@ -26,7 +26,7 @@ nice_assert_select provides helpers for making the calls more rubyish and more r
   form_method_field (this is the hidden field Rails uses for determing what HTTP method to use, since browsers are generally limited to GET and POST)
   submit_button
 
-It is by no means comprehensive, as it was extracted from a project which only needed this selectors.
+It is by no means comprehensive, as it was extracted from a project which only needed these assert_selects.
 
 == Installing
 
