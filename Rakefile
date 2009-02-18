@@ -4,10 +4,10 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |s|
     s.name = "nice_assert_select"
-    s.summary = %Q{TODO}
+    s.summary = %Q{make assert_select nicer}
     s.email = "josh@technicalpickles.com"
     s.homepage = "http://github.com/technicalpickles/nice_assert_select"
-    s.description = "TODO"
+    s.description = "make assert_select nicer"
     s.authors = ["Josh Nichols"]
   end
 rescue LoadError
@@ -19,7 +19,7 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = 'nice_assert_select'
   rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README*')
+  rdoc.rdoc_files.include('README.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
@@ -39,13 +39,6 @@ begin
   end
 rescue LoadError
   puts "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
-end
-
-begin
-  require 'cucumber/rake/task'
-  Cucumber::Rake::Task.new(:features)
-rescue LoadError
-  puts "Cucumber is not available. In order to run features, you must: sudo gem install cucumber"
 end
 
 task :default => :test
