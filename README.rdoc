@@ -1,0 +1,34 @@
+= nice_assert_select
+
+Tired of ugly assert_select calls?
+
+  assert_select "form[action=?][method=post]", sources_path do
+    assert_select "input[type=text][name=?]", 'source[name]'
+    assert_select "input[type=hidden][name=_method][value=put]"
+    assert_select "input[type=submit]"
+  end
+
+How about some nice assert_selects?
+
+  assert_select form(:action => :post, :action => sources_path) do
+    assert_select text_field(:name => 'source[name]')
+    assert_select form_method_field(:put)
+    assert_select submit_button
+  end
+
+  
+nice_assert_select provides helpers for making the calls more rubyish and more readable. Currently, they are mostly limited to form related selectors that do attribute matching.
+
+  form
+  text_field
+  hidden_field
+  password_field
+  form_method_field (this is the hidden field Rails uses for determing what HTTP method to use, since browsers are generally limited to GET and POST)
+  submit_button
+
+It is by no means comprehensive, as it was extracted from a project which only needed this selectors.
+
+COPYRIGHT
+=========
+
+Copyright (c) 2009 Josh Nichols. See LICENSE for details.
