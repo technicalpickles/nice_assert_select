@@ -30,7 +30,12 @@ module NiceAssertSelect
   end
 end
 
-ActionController::TestCase.class_eval do
-  include NiceAssertSelect
+if defined? Rails
+  Rails.configuration.after_initialize do
+    require 'action_controller/test_case'
+    ActionController::TestCase.class_eval do
+      include NiceAssertSelect
+    end
+  end
 end
 
