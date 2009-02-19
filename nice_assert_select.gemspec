@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{nice_assert_select}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Josh Nichols"]
-  s.date = %q{2009-02-18}
+  s.date = %q{2009-02-19}
   s.description = %q{make assert_select nicer}
   s.email = %q{josh@technicalpickles.com}
   s.files = ["README.rdoc", "VERSION.yml", "lib/nice_assert_select.rb", "test/test_helper.rb", "test/test_nice_assert_select.rb"]
